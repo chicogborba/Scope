@@ -40,3 +40,8 @@
   background-color: #6a0dad;
   transform:scale(1.1);
 }
+
+.titulo{
+  font-size: 1rem;
+  text-align: center;
+}

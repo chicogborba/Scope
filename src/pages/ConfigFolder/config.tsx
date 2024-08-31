@@ -23,7 +23,7 @@ const config = () => {
                             <InputBlock placeholder="1h" titulo="Tempo de carga: " />
                         </div>
                     </div>
-                    <div style={{display: "flex", justifyContent: 'center', marginTop: '1rem'}}>
+                    <div style={{display: "flex", justifyContent: 'center', marginTop: '4rem', scale: '1.4'}}>
                         <input className="Submit" type="submit" value="Salvar" onClick={() => window.alert('D9D9D9')} />
                     </div>
                 </div>

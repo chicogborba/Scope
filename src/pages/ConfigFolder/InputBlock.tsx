@@ -5,7 +5,7 @@ import { IconType } from "react-icons";
 function InputBlock(props : {placeholder: string, titulo: string, icon?: IconType}){
     return (
         <div className="input_block">
-            <p className="sub_titulo_tela_login">{props.titulo}</p>
+            <p className="titulo">{props.titulo}</p>
             <input className="input_text" type="text" placeholder={props.placeholder} />
         </div>
     )
