@@ -1,5 +1,5 @@
 import React from 'react';
-import { RiGroupLine } from "react-icons/ri";
+import { RiCrosshair2Line, RiGroupLine } from "react-icons/ri";
 import { MdLogout } from "react-icons/md";
 import Logo from "../assets/Logo.svg";
 import { BsGlobeAmericas } from "react-icons/bs";
@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({selected}) => {
   return (
     <div className="w-20 h-screen bg-white shadow-2xl justify-between flex flex-col  items-center py-8">
       <div className="flex flex-col gap-4 items-center">
-        <img src={Logo} alt="Logo" className="w-6 h-6"/>
+        <RiCrosshair2Line className="w-10 h-10 text-primary"/>
         <div className="w-1/2 border-2 border-gray-100 my-4 rounded-full"></div> 
         <div 
         onClick={selected == "list"? undefined :  () => handleClick("/list")}

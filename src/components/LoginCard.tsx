@@ -1,7 +1,9 @@
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlineLockClosed } from "react-icons/hi";
 import TextFieldWithIcons from "./TextFieldWithIcons";
-import Logo from "../assets/Logo.svg";
+import { PiAirplaneTiltFill } from "react-icons/pi";
+import { TbDrone } from "react-icons/tb";
+import { RiCrosshair2Line } from "react-icons/ri";
 
 
 export interface LoginCardProps {
@@ -22,8 +24,12 @@ const LoginCard: React.FC<LoginCardProps> =
       <div className="hero-content flex-col lg:flex-row-reverse max-w-xl w-full">
         <div className="card shrink-0 w-full shadow-2xl bg-base-100">
           <form className="card-body px-20 py-14 text-center flex flex-col">
-            <img src={Logo} alt="Logo" className="w-40 h-40 ml-auto mr-auto"/>
-            <h1 className="text-5xl font-bold text-primary">NexusTrip</h1>
+            <PiAirplaneTiltFill className="w-40 h-40 ml-auto mr-auto text-primary"/>
+            <div className="flex items-center justify-center">
+            <h1 className="text-5xl font-bold text-primary">EagleSc</h1>
+            <RiCrosshair2Line size={"3rem"} className="text-primary"/>
+            <h1 className="text-5xl font-bold text-primary">pe</h1>
+            </div>
             <div className="form-control">
               <TextFieldWithIcons 
               onTextChange={onEmailChange} 
