@@ -24,7 +24,7 @@ const config = () => {
                         </div>
                     </div>
                     <div style={{display: "flex", justifyContent: 'center', marginTop: '4rem', scale: '1.4'}}>
-                        <input className="Submit" type="submit" value="Salvar" onClick={() => window.alert('D9D9D9')} />
+                        <input className="btn btn-sm btn-primary  mb-4" type="submit" value="Salvar" onClick={() => window.alert('D9D9D9')} />
                     </div>
                 </div>
 
