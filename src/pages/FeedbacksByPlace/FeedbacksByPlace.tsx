@@ -86,7 +86,6 @@ const FeedbacksByPlace = () => {
                 ))}
               </div>
             )}
-            teste
           </div>
         </div>
       </div>

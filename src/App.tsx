@@ -3,6 +3,8 @@ import ClientList from "./pages/ClientList";
 import ClientInfo from "./pages/ClientInfo/ClientInfo";
 import ClientLogin from "./pages/Login";
 import FeedbacksByPlace from "./pages/FeedbacksByPlace/FeedbacksByPlace";
+import Config from "./pages/ConfigFolder/config";
+import './App.css';
 
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
           <Route path="/list" element={<ClientList />} />
           <Route path="/info/:id" element={<ClientInfo />} />
           <Route path="feedbackByPlace" element={<FeedbacksByPlace/>} />
+          <Route path="config" element={<Config/>} />
         </Routes>
       </div>
     </Router>
