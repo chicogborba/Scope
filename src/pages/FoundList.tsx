@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Card from "../components/Card";
 import { mock_data } from "../mock/mock";
 
-const ClientList = () => {
-  const [data, setData] = useState(mock_data);
+const FoundList = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Fazendo a requisição GET quando o componente é montado
+    fetch('http://localhost:8080/get-data')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Erro na requisição'); // Tratamento de erro para respostas não OK
+        }
+        return response.json(); // Convertendo a resposta para JSON
+      })
+      .then((data) => {
+        setData(data.data); // Armazenando os dados no estado
+      })
+      .catch((error) => {
+        console.log(error)
+      });
+  }, []); // Dependência vazia para garantir que o useEffect seja executado apenas uma vez
 
   return (
     <div className="flex ">
@@ -38,12 +55,11 @@ const ClientList = () => {
 
           {data.map(
             (item, index) => (
-              console.log(item.image.url),
               (
                 <Card
                 key={index}
                 coordinate={item.coordinate}
-                image={item.image.url}
+                image={item.image}
                 />
               )
             )
@@ -54,4 +70,4 @@ const ClientList = () => {
   );
 };
 
-export default ClientList;
+export default FoundList;

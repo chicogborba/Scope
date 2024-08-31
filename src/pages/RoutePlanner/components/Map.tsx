@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { bairros } from "../data";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { FaPlane } from "react-icons/fa";
+import { TbDrone } from "react-icons/tb";
+
 
 export interface MapProps {
 }
@@ -33,7 +35,7 @@ const Map: React.FC<MapProps> = () => {
   );
 
   const planeMarkup = renderToStaticMarkup(
-    <FaPlane className="fill-slate-500 w-8 h-8 mt-6" />
+    <TbDrone className="color-slate-500 w-8 h-8 mt-6" />
   );
 
   const customMarkerIcon = divIcon({
@@ -105,7 +107,7 @@ const Map: React.FC<MapProps> = () => {
   "lat": -30.0346,
   "lng": -51.2177
 }}
-        zoom={11}
+        zoom={13}
         scrollWheelZoom={true}
         className="shadow-2xl rounded-3xl w-full h-[35rem]"
       >

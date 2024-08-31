@@ -9,7 +9,6 @@ const ClientLogin = () => {
     const nav = useNavigate();
 
     const handleLogin = () => {
-        alert(`Email: ${email} Password: ${password}`)
         nav("/list");
     }
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {

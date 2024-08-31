@@ -1,9 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ClientList from "./pages/ClientList";
-import ClientInfo from "./pages/ClientInfo/ClientInfo";
+import FoundList from "./pages/FoundList";
 import ClientLogin from "./pages/Login";
-import FeedbacksByPlace from "./pages/FeedbacksByPlace/FeedbacksByPlace";
-import Config from "./pages/ConfigFolder/config";
+import RoutePlanner from "./pages/RoutePlanner/RoutePlanner";
 import './App.css';
 
 const App = () => {
@@ -12,9 +10,8 @@ const App = () => {
       <div className="bg-[#FAFAFA] min-h-screen w-screen text-black">
         <Routes>
           <Route path="*" element={<ClientLogin />} />
-          <Route path="/list" element={<ClientList />} />
-          <Route path="/info/:id" element={<ClientInfo />} />
-          <Route path="feedbackByPlace" element={<FeedbacksByPlace/>} />
+          <Route path="/list" element={<FoundList />} />
+          <Route path="feedbackByPlace" element={<RoutePlanner/>} />
         </Routes>
       </div>
     </Router>
