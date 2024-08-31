@@ -13,6 +13,7 @@ const App = () => {
           <Route path="/list" element={<ClientList />} />
           <Route path="/info/:id" element={<ClientInfo />} />
           <Route path="feedbackByPlace" element={<FeedbacksByPlace/>} />
+          {/* <Route path="" */}
         </Routes>
       </div>
     </Router>
